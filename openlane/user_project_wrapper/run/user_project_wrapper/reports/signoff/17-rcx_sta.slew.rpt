@@ -1,0 +1,64 @@
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+max slew
+
+Pin                                    Limit    Slew   Slack
+------------------------------------------------------------
+io_in[15]                               4.00   10.38   -6.38 (VIOLATED)
+io_in[16]                               4.00   10.27   -6.27 (VIOLATED)
+io_in[13]                               4.00    9.64   -5.64 (VIOLATED)
+io_in[12]                               4.00    8.90   -4.90 (VIOLATED)
+io_in[11]                               4.00    8.30   -4.30 (VIOLATED)
+io_in[10]                               4.00    8.21   -4.21 (VIOLATED)
+io_in[14]                               4.00    7.95   -3.95 (VIOLATED)
+io_in[17]                               4.00    7.58   -3.58 (VIOLATED)
+io_in[8]                                4.00    6.78   -2.78 (VIOLATED)
+io_in[2]                                4.00    6.38   -2.38 (VIOLATED)
+io_in[9]                                4.00    5.89   -1.89 (VIOLATED)
+io_in[3]                                4.00    5.60   -1.60 (VIOLATED)
+io_in[7]                                4.00    5.17   -1.17 (VIOLATED)
+io_in[18]                               4.00    5.06   -1.06 (VIOLATED)
+io_in[36]                               4.00    4.69   -0.69 (VIOLATED)
+io_in[0]                                4.00    4.67   -0.67 (VIOLATED)
+io_in[4]                                4.00    4.52   -0.52 (VIOLATED)
+io_in[19]                               4.00    4.51   -0.51 (VIOLATED)
+io_in[6]                                4.00    4.46   -0.46 (VIOLATED)
+io_in[1]                                4.00    4.34   -0.34 (VIOLATED)
+io_in[24]                               4.00    4.18   -0.18 (VIOLATED)
+
+max capacitance
+
+Pin                                    Limit     Cap   Slack
+------------------------------------------------------------
+io_in[15]                               0.23    0.66   -0.43 (VIOLATED)
+io_in[16]                               0.23    0.65   -0.42 (VIOLATED)
+io_in[13]                               0.23    0.61   -0.38 (VIOLATED)
+io_in[12]                               0.23    0.56   -0.33 (VIOLATED)
+io_in[11]                               0.23    0.52   -0.29 (VIOLATED)
+io_in[10]                               0.23    0.52   -0.29 (VIOLATED)
+io_in[14]                               0.23    0.50   -0.27 (VIOLATED)
+io_in[17]                               0.23    0.48   -0.25 (VIOLATED)
+io_in[8]                                0.23    0.42   -0.19 (VIOLATED)
+io_in[2]                                0.23    0.40   -0.17 (VIOLATED)
+io_in[9]                                0.23    0.37   -0.14 (VIOLATED)
+io_in[3]                                0.23    0.35   -0.12 (VIOLATED)
+io_in[7]                                0.23    0.32   -0.09 (VIOLATED)
+io_in[18]                               0.23    0.32   -0.09 (VIOLATED)
+io_in[36]                               0.23    0.29   -0.06 (VIOLATED)
+io_in[0]                                0.23    0.29   -0.06 (VIOLATED)
+io_in[4]                                0.23    0.28   -0.05 (VIOLATED)
+io_in[19]                               0.23    0.28   -0.05 (VIOLATED)
+io_in[6]                                0.23    0.28   -0.05 (VIOLATED)
+io_in[1]                                0.23    0.27   -0.04 (VIOLATED)
+io_in[24]                               0.23    0.26   -0.03 (VIOLATED)
+io_in[23]                               0.23    0.25   -0.02 (VIOLATED)
+io_in[25]                               0.23    0.25   -0.01 (VIOLATED)
+
+
+===========================================================================
+max slew violation count 21
+max fanout violation count 0
+max cap violation count 23
+============================================================================
