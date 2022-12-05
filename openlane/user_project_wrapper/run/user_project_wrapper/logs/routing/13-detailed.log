@@ -1,0 +1,203 @@
+OpenROAD 7c85c140308f01b73f57ea1117f3e43f39abd437 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0140] SpacingRange unsupported.
+[WARNING DRT-0140] SpacingRange unsupported.
+[WARNING DRT-0140] SpacingRange unsupported.
+[WARNING DRT-0140] SpacingRange unsupported.
+[WARNING DRT-0140] SpacingRange unsupported.
+
+Units:                2000
+Number of layers:     11
+Number of macros:     230
+Number of vias:       60
+Number of viarulegen: 18
+
+[INFO DRT-0150] Reading design.
+
+Design:                   user_project_wrapper
+Die area:                 ( 0 0 ) ( 5960400 5960400 )
+Number of track patterns: 10
+Number of DEF vias:       2
+Number of components:     1
+Number of terminals:      418
+Number of snets:          2
+Number of nets:           416
+
+[INFO DRT-0167] List of default vias:
+  Layer Via1
+    default via: Via1_HV
+  Layer Via2
+    default via: Via2_VH
+  Layer Via3
+    default via: Via3_HV
+  Layer Via4
+    default via: Via4_1_VH
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 1.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete Poly2.
+[INFO DRT-0024]   Complete CON.
+[INFO DRT-0024]   Complete Metal1.
+[INFO DRT-0024]   Complete Via1.
+[INFO DRT-0024]   Complete Metal2.
+[INFO DRT-0024]   Complete Via2.
+[INFO DRT-0024]   Complete Metal3.
+[INFO DRT-0024]   Complete Via3.
+[INFO DRT-0024]   Complete Metal4.
+[INFO DRT-0024]   Complete Via4.
+[INFO DRT-0024]   Complete Metal5.
+[INFO DRT-0033] Poly2 shape region query size = 0.
+[INFO DRT-0033] CON shape region query size = 0.
+[INFO DRT-0033] Metal1 shape region query size = 1.
+[INFO DRT-0033] Via1 shape region query size = 0.
+[INFO DRT-0033] Metal2 shape region query size = 572.
+[INFO DRT-0033] Via2 shape region query size = 0.
+[INFO DRT-0033] Metal3 shape region query size = 88.
+[INFO DRT-0033] Via3 shape region query size = 0.
+[INFO DRT-0033] Metal4 shape region query size = 2798.
+[INFO DRT-0033] Via4 shape region query size = 41680.
+[INFO DRT-0033] Metal5 shape region query size = 2784.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 100 pins.
+[INFO DRT-0078]   Complete 121 pins.
+[INFO DRT-0081]   Complete 0 unique inst patterns.
+[INFO DRT-0084]   Complete 0 groups.
+#scanned instances     = 1
+#unique  instances     = 1
+#stdCellGenAp          = 0
+#stdCellValidPlanarAp  = 0
+#stdCellValidViaAp     = 0
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 0
+#instTermValidViaApCnt = 0
+#macroGenAp            = 847
+#macroValidPlanarAp    = 847
+#macroValidViaAp       = 847
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 204.65 (MB), peak = 204.65 (MB)
+
+Number of guides:     682
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 354 STEP 16800 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 354 STEP 16800 ;
+[INFO DRT-0028]   Complete Poly2.
+[INFO DRT-0028]   Complete CON.
+[INFO DRT-0028]   Complete Metal1.
+[INFO DRT-0028]   Complete Via1.
+[INFO DRT-0028]   Complete Metal2.
+[INFO DRT-0028]   Complete Via2.
+[INFO DRT-0028]   Complete Metal3.
+[INFO DRT-0028]   Complete Via3.
+[INFO DRT-0028]   Complete Metal4.
+[INFO DRT-0028]   Complete Via4.
+[INFO DRT-0028]   Complete Metal5.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete Poly2 (guide).
+[INFO DRT-0035]   Complete CON (guide).
+[INFO DRT-0035]   Complete Metal1 (guide).
+[INFO DRT-0035]   Complete Via1 (guide).
+[INFO DRT-0035]   Complete Metal2 (guide).
+[INFO DRT-0035]   Complete Via2 (guide).
+[INFO DRT-0035]   Complete Metal3 (guide).
+[INFO DRT-0035]   Complete Via3 (guide).
+[INFO DRT-0035]   Complete Metal4 (guide).
+[INFO DRT-0035]   Complete Via4 (guide).
+[INFO DRT-0035]   Complete Metal5 (guide).
+[INFO DRT-0036] Poly2 guide region query size = 0.
+[INFO DRT-0036] CON guide region query size = 0.
+[INFO DRT-0036] Metal1 guide region query size = 0.
+[INFO DRT-0036] Via1 guide region query size = 0.
+[INFO DRT-0036] Metal2 guide region query size = 248.
+[INFO DRT-0036] Via2 guide region query size = 0.
+[INFO DRT-0036] Metal3 guide region query size = 222.
+[INFO DRT-0036] Via3 guide region query size = 0.
+[INFO DRT-0036] Metal4 guide region query size = 8.
+[INFO DRT-0036] Via4 guide region query size = 0.
+[INFO DRT-0036] Metal5 guide region query size = 0.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0185] Post process initialize RPin region query.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 256 vertical wires in 8 frboxes and 222 horizontal wires in 8 frboxes.
+[INFO DRT-0186] Done with 14 vertical wires in 8 frboxes and 0 horizontal wires in 8 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 205.93 (MB), peak = 205.93 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 217.78 (MB), peak = 217.78 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 10% with 0 violations.
+    elapsed time = 00:00:00, memory = 242.73 (MB).
+    Completing 20% with 0 violations.
+    elapsed time = 00:00:01, memory = 258.98 (MB).
+    Completing 30% with 0 violations.
+    elapsed time = 00:00:02, memory = 249.97 (MB).
+    Completing 40% with 0 violations.
+    elapsed time = 00:00:03, memory = 259.99 (MB).
+    Completing 50% with 0 violations.
+    elapsed time = 00:00:04, memory = 268.81 (MB).
+    Completing 60% with 0 violations.
+    elapsed time = 00:00:05, memory = 256.12 (MB).
+    Completing 70% with 0 violations.
+    elapsed time = 00:00:05, memory = 264.30 (MB).
+    Completing 80% with 0 violations.
+    elapsed time = 00:00:06, memory = 269.12 (MB).
+    Completing 90% with 0 violations.
+    elapsed time = 00:00:07, memory = 269.12 (MB).
+    Completing 100% with 0 violations.
+    elapsed time = 00:00:08, memory = 269.12 (MB).
+[INFO DRT-0199]   Number of violations = 0.
+[INFO DRT-0267] cpu time = 00:00:16, elapsed time = 00:00:08, memory = 268.52 (MB), peak = 542.62 (MB)
+Total wire length = 320177 um.
+Total wire length on LAYER Metal1 = 4 um.
+Total wire length on LAYER Metal2 = 129530 um.
+Total wire length on LAYER Metal3 = 186444 um.
+Total wire length on LAYER Metal4 = 4198 um.
+Total wire length on LAYER Metal5 = 0 um.
+Total number of vias = 361.
+Up-via summary (total 361):.
+
+--------------
+  Poly2      0
+ Metal1      2
+ Metal2    337
+ Metal3     22
+ Metal4      0
+--------------
+           361
+
+
+[INFO DRT-0198] Complete detail routing.
+Total wire length = 320177 um.
+Total wire length on LAYER Metal1 = 4 um.
+Total wire length on LAYER Metal2 = 129530 um.
+Total wire length on LAYER Metal3 = 186444 um.
+Total wire length on LAYER Metal4 = 4198 um.
+Total wire length on LAYER Metal5 = 0 um.
+Total number of vias = 361.
+Up-via summary (total 361):.
+
+--------------
+  Poly2      0
+ Metal1      2
+ Metal2    337
+ Metal3     22
+ Metal4      0
+--------------
+           361
+
+
+[INFO DRT-0267] cpu time = 00:00:16, elapsed time = 00:00:08, memory = 268.52 (MB), peak = 542.62 (MB)
+
+[INFO DRT-0180] Post processing.
+Setting global connections for newly added cells...
+Writing OpenROAD database to /home/xb4syf/ASIC/gf180-demo/openlane/user_project_wrapper/runs/22_12_05_11_20/results/routing/user_project_wrapper.odb...
+Writing netlist to /home/xb4syf/ASIC/gf180-demo/openlane/user_project_wrapper/runs/22_12_05_11_20/results/routing/user_project_wrapper.nl.v...
+Writing powered netlist to /home/xb4syf/ASIC/gf180-demo/openlane/user_project_wrapper/runs/22_12_05_11_20/results/routing/user_project_wrapper.pnl.v...
+Writing layout to /home/xb4syf/ASIC/gf180-demo/openlane/user_project_wrapper/runs/22_12_05_11_20/results/routing/user_project_wrapper.def...
