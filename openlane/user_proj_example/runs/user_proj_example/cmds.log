@@ -1,0 +1,122 @@
+Mon Dec 05 15:22:01 UTC 2022 - Executing "/openlane/scripts/mergeLef.py -o /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/merged.nom.lef -i /localtmp/asic/gf180/pdk/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0.tlef /localtmp/asic/gf180/pdk/gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef |& tee /dev/null"
+
+Mon Dec 05 15:22:01 UTC 2022 - Executing "python3 /openlane/scripts/mergeLib.py --output /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/synthesis/merged.lib --name gf180mcuC_merged /localtmp/asic/gf180/pdk//gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
+
+Mon Dec 05 15:22:02 UTC 2022 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/synthesis/trimmed.lib.exclude.list --output /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/synthesis/trimmed.lib /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/synthesis/merged.lib"
+
+Mon Dec 05 15:22:02 UTC 2022 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/cts/cts.lib.exclude.list --output /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/cts/cts.lib /localtmp/asic/gf180/pdk//gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib"
+
+Mon Dec 05 15:22:03 UTC 2022 - Executing "python3 /openlane/scripts/new_tracks.py -i /localtmp/asic/gf180/pdk//gf180mcuC/libs.tech/openlane/gf180mcu_fd_sc_mcu7t5v0/tracks.info -o /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/routing/config.tracks"
+
+Mon Dec 05 15:22:03 UTC 2022 - Executing "echo {OpenLane 235fa7a4a2872e779588919c58fc4fa32568e075} > /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/OPENLANE_VERSION"
+
+Mon Dec 05 15:22:03 UTC 2022 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /localtmp/asic/gf180/pdk//gf180mcuC/libs.ref/gf180mcu_fd_sc_mcu7t5v0/liberty/gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.lib > /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/synthesis/1-gf180mcu_fd_sc_mcu7t5v0__tt_025C_5v00.no_pg.lib"
+
+Mon Dec 05 15:22:04 UTC 2022 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/synthesis/trimmed.lib > /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/synthesis/1-trimmed.no_pg.lib"
+
+Mon Dec 05 15:22:04 UTC 2022 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/synthesis/1-synthesis.log"
+
+Mon Dec 05 15:22:07 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/results\/synthesis\/plant_example.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:22:07 UTC 2022 - Executing "sed -i /defparam/d /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/results/synthesis/plant_example.v"
+
+Mon Dec 05 15:22:07 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/sta.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/synthesis/2-sta.log"
+
+Mon Dec 05 15:22:08 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/floorplan/3-initial_fp.log"
+
+Mon Dec 05 15:22:09 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/floorplan/3-initial_fp.log"
+
+Mon Dec 05 15:22:10 UTC 2022 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/defutil.py extract_core_dims --output-data /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/dimensions.txt --input-lef /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/merged.nom.lef /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/floorplan/3-initial_fp.def"
+
+Mon Dec 05 15:22:10 UTC 2022 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/io_place.py --config /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/pin_order.cfg --hor-layer Metal3 --ver-layer Metal2 --ver-width-mult 2 --hor-width-mult 2 --hor-extension -1 --ver-extension -1 --length 4 --unmatched-error --input-lef /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/merged.nom.lef --output-def /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/floorplan/4-io.def --output /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/floorplan/4-io.odb /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/floorplan/3-initial_fp.odb |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/floorplan/4-place_io.log"
+
+Mon Dec 05 15:22:11 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/floorplan/5-tap.log"
+
+Mon Dec 05 15:22:12 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/floorplan/6-pdn.log"
+
+Mon Dec 05 15:22:13 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/placement/7-global.log"
+
+Mon Dec 05 15:22:17 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/placement/8-resizer.log"
+
+Mon Dec 05 15:22:18 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/tmp\/placement\/8-resizer.nl.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:22:19 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/placement/9-detailed.log"
+
+Mon Dec 05 15:22:20 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/results\/placement\/plant_example.nl.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:22:20 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/cts/10-cts.log"
+
+Mon Dec 05 15:22:59 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/cts/11-resizer.log"
+
+Mon Dec 05 15:23:00 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/tmp\/cts\/11-plant_example.resized.nl.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:23:00 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_timing.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/routing/12-resizer.log"
+
+Mon Dec 05 15:23:02 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/tmp\/12-plant_example.nl.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:23:02 UTC 2022 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/diodes.py place --diode-cell gf180mcu_fd_sc_mcu7t5v0__antenna --diode-pin I --fake-diode-cell gf180mcu_fd_sc_mcu7t5v0__antenna --input-lef /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/merged.nom.lef --output-def /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/routing/13-diodes.def --output /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/routing/13-diodes.odb /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/12-plant_example.odb |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/routing/13-diodes.log"
+
+Mon Dec 05 15:23:02 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/routing/14-diode_legalization.log"
+
+Mon Dec 05 15:23:03 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/tmp\/routing\/diodes.nl.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:23:04 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/fill.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/routing/15-fill.log"
+
+Mon Dec 05 15:23:05 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/tmp\/routing\/15-fill.nl.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:23:05 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/groute.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/routing/16-global.log"
+
+Mon Dec 05 15:23:07 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/routing/16-global_write_netlist.log"
+
+Mon Dec 05 15:23:08 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/tmp\/routing\/global.nl.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:23:08 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/droute.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/routing/18-detailed.log"
+
+Mon Dec 05 15:23:23 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/results\/routing\/plant_example.nl.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:23:23 UTC 2022 - Executing "python3 /openlane/scripts/drc_rosetta.py tr to_klayout -o /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/routing/drt.klayout.xml --design-name plant_example /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/routing/drt.drc"
+
+Mon Dec 05 15:23:23 UTC 2022 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/wire_lengths.py --report-out /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/routing/19-wire_lengths.csv --input-lef /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/merged.nom.lef --output-def /dev/null --output /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/results/routing/plant_example.odb /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/results/routing/plant_example.odb |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/routing/19-wire_lengths.log"
+
+Mon Dec 05 15:23:24 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/20-parasitics_extraction.nom.log"
+
+Mon Dec 05 15:23:25 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/sta_multi_corner.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/21-rcx_mcsta.nom.log"
+
+Mon Dec 05 15:23:28 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/sta.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/22-rcx_sta.log"
+
+Mon Dec 05 15:23:30 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /localtmp/asic/gf180/pdk//gf180mcuC/libs.tech/magic/gf180mcuC.magicrc < /openlane/scripts/magic/def/mag_gds.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/23-gdsii.log"
+
+Mon Dec 05 15:23:31 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /localtmp/asic/gf180/pdk//gf180mcuC/libs.tech/magic/gf180mcuC.magicrc < /openlane/scripts/magic/gds/mag_with_pointers.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/23-gds_ptrs.log"
+
+Mon Dec 05 15:23:32 UTC 2022 - Executing "sed -i -n {/^<< properties >>/,/^<< end >>/p} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/signoff/gds_ptrs.mag"
+
+Mon Dec 05 15:23:32 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /localtmp/asic/gf180/pdk//gf180mcuC/libs.tech/magic/gf180mcuC.magicrc < /openlane/scripts/magic/mag/lef.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/23-lef.log"
+
+Mon Dec 05 15:23:33 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /localtmp/asic/gf180/pdk//gf180mcuC/libs.tech/magic/gf180mcuC.magicrc < /openlane/scripts/magic/lef/maglef.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/23-maglef.log"
+
+Mon Dec 05 15:23:33 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /localtmp/asic/gf180/pdk//gf180mcuC/libs.tech/magic/gf180mcuC.magicrc < /openlane/scripts/magic/extract_spice.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/24-spice.log"
+
+Mon Dec 05 15:23:41 UTC 2022 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/power_utils.py write_powered_def --output /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/signoff/24-plant_example.p.def --input-lef /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/merged.nom.lef --power-port vdd --ground-port vss --powered-netlist {} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/results/routing/plant_example.def |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/25-write_powered_def.log"
+
+Mon Dec 05 15:23:41 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/25-write_powered_verilog.log"
+
+Mon Dec 05 15:23:42 UTC 2022 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/home\/xb4syf\/ASIC\/gf180-demo\/openlane\/user_proj_example\/runs\/22_12_05_10_22\/tmp\/signoff\/24-plant_example.nl.v/} /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/config.tcl"
+
+Mon Dec 05 15:23:43 UTC 2022 - Executing "netgen -batch source /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/tmp/signoff/27-setup_file.lef.lvs |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/27-lvs.lef.log"
+
+Mon Dec 05 15:23:43 UTC 2022 - Executing "magic -noconsole -dnull -rcfile /localtmp/asic/gf180/pdk//gf180mcuC/libs.tech/magic/gf180mcuC.magicrc < /openlane/scripts/magic/drc.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/28-drc.log"
+
+Mon Dec 05 15:24:33 UTC 2022 - Executing "python3 /openlane/scripts/drc_rosetta.py magic to_tcl -o /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/drc.tcl /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/drc.rpt"
+
+Mon Dec 05 15:24:33 UTC 2022 - Executing "python3 /openlane/scripts/drc_rosetta.py magic to_tr -o /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/drc.tr /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/drc.rpt"
+
+Mon Dec 05 15:24:33 UTC 2022 - Executing "python3 /openlane/scripts/drc_rosetta.py tr to_klayout -o /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/drc.klayout.xml --design-name plant_example /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/drc.tr"
+
+Mon Dec 05 15:24:33 UTC 2022 - Executing "python3 /openlane/scripts/drc_rosetta.py magic to_rdb -o /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/drc.rdb /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/drc.rpt"
+
+Mon Dec 05 15:24:34 UTC 2022 - Executing "openroad -exit /openlane/scripts/openroad/antenna_check.tcl |& tee /dev/null /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/29-antenna.log"
+
+Mon Dec 05 15:24:35 UTC 2022 - Executing "python3 /openlane/scripts/extract_antenna_violators.py --output /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/29-antenna_violators.rpt /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/29-antenna.log"
+
+Mon Dec 05 15:24:35 UTC 2022 - Executing "python3 /openlane/scripts/generate_reports.py -d /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example --design_name plant_example --tag 22_12_05_10_22 --output_file /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/metrics.csv --man_report /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/manufacturability.rpt --run_path /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22"
+
