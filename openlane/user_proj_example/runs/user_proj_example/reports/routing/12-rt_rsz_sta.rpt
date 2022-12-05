@@ -1,0 +1,67 @@
+
+===========================================================================
+report_checks -unconstrained
+============================================================================
+Startpoint: io_in[1] (input port clocked by wb_clk_i)
+Endpoint: _126_ (rising edge-triggered flip-flop clocked by wb_clk_i)
+Path Group: wb_clk_i
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock wb_clk_i (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                          6.00    6.00 ^ input external delay
+                  0.10    0.03    6.03 ^ io_in[1] (in)
+     1    0.00                           io_in[1] (net)
+                  0.10    0.00    6.03 ^ input2/I (gf180mcu_fd_sc_mcu7t5v0__dlyb_1)
+                  0.21    0.95    6.99 ^ input2/Z (gf180mcu_fd_sc_mcu7t5v0__dlyb_1)
+     2    0.01                           net2 (net)
+                  0.21    0.00    6.99 ^ _095_/A3 (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+                  0.32    0.60    7.59 ^ _095_/Z (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+     2    0.01                           _034_ (net)
+                  0.32    0.00    7.59 ^ _104_/A2 (gf180mcu_fd_sc_mcu7t5v0__nand2_1)
+                  0.32    0.20    7.79 v _104_/ZN (gf180mcu_fd_sc_mcu7t5v0__nand2_1)
+     3    0.01                           _043_ (net)
+                  0.32    0.00    7.79 v _105_/A3 (gf180mcu_fd_sc_mcu7t5v0__or3_1)
+                  0.29    0.73    8.53 v _105_/Z (gf180mcu_fd_sc_mcu7t5v0__or3_1)
+     2    0.01                           _044_ (net)
+                  0.29    0.00    8.53 v _115_/B (gf180mcu_fd_sc_mcu7t5v0__oai21_1)
+                  0.27    0.24    8.77 ^ _115_/ZN (gf180mcu_fd_sc_mcu7t5v0__oai21_1)
+     1    0.00                           _053_ (net)
+                  0.27    0.00    8.77 ^ _116_/A4 (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+                  0.19    0.50    9.27 ^ _116_/Z (gf180mcu_fd_sc_mcu7t5v0__and4_1)
+     1    0.00                           _054_ (net)
+                  0.19    0.00    9.27 ^ _117_/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_1)
+                  0.13    0.23    9.50 ^ _117_/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_1)
+     1    0.00                           fsm_plant_opt.tmp2411 (net)
+                  0.13    0.00    9.50 ^ _126_/D (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+                                  9.50   data arrival time
+
+                         30.00   30.00   clock wb_clk_i (rise edge)
+                          0.00   30.00   clock source latency
+                  0.13    0.05   30.05 ^ wb_clk_i (in)
+     1    0.02                           wb_clk_i (net)
+                  0.13    0.00   30.05 ^ clkbuf_0_wb_clk_i/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_16)
+                  0.11    0.23   30.29 ^ clkbuf_0_wb_clk_i/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_16)
+     2    0.05                           clknet_0_wb_clk_i (net)
+                  0.11    0.00   30.29 ^ clkbuf_1_0__f_wb_clk_i/I (gf180mcu_fd_sc_mcu7t5v0__clkbuf_16)
+                  0.08    0.21   30.50 ^ clkbuf_1_0__f_wb_clk_i/Z (gf180mcu_fd_sc_mcu7t5v0__clkbuf_16)
+     3    0.01                           clknet_1_0__leaf_wb_clk_i (net)
+                  0.08    0.00   30.50 ^ _126_/CLK (gf180mcu_fd_sc_mcu7t5v0__dffq_1)
+                         -0.25   30.25   clock uncertainty
+                          0.00   30.25   clock reconvergence pessimism
+                         -0.22   30.02   library setup time
+                                 30.02   data required time
+-----------------------------------------------------------------------------
+                                 30.02   data required time
+                                 -9.50   data arrival time
+-----------------------------------------------------------------------------
+                                 20.52   slack (MET)
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+No paths found.

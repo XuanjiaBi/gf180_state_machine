@@ -1,0 +1,16 @@
+Design Name: plant_example
+Run Directory: /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22
+----------------------------------------
+
+Magic DRC Summary:
+Source: /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /home/xb4syf/ASIC/gf180-demo/openlane/user_proj_example/runs/22_12_05_10_22/logs/signoff/plant_example.lvs.lef.log
+Source not found.
+----------------------------------------
+
+Antenna Summary:
+No antenna report found.
