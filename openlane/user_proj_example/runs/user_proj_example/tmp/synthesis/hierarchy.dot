@@ -1,0 +1,32 @@
+digraph "plant_example" {
+label="plant_example";
+rankdir="LR";
+remincross=true;
+n1 [ shape=diamond, label="count", color="black", fontcolor="black" ];
+n2 [ shape=diamond, label="rst", color="black", fontcolor="black" ];
+n3 [ shape=diamond, label="clk", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="io_oeb", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="io_out", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="io_in", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="wbs_sel_i", color="black", fontcolor="black" ];
+n8 [ shape=octagon, label="wbs_we_i", color="black", fontcolor="black" ];
+n9 [ shape=octagon, label="wb_rst_i", color="black", fontcolor="black" ];
+n10 [ shape=octagon, label="wb_clk_i", color="black", fontcolor="black" ];
+c17 [ shape=record, label="{{<p3> clk|<p11> reset|<p12> start|<p13> temperature|<p14> water}|fsm_plant_opt\nfsm_plant_opt|{<p15> ac|<p16> pump}}" ];
+x0 [ shape=record, style=rounded, label="0 -&gt; 37:32 |<s0> 31:0 - 31:0 " ];
+x1 [shape=box, style=rounded, label="BUF"];
+x2 [shape=box, style=rounded, label="BUF"];
+n1:e -> x0:s0:w [color="black", style="setlinewidth(3)", label=""];
+n10:e -> x1:w:w [color="black", label=""];
+x2:e:e -> n2:w [color="black", label=""];
+n2:e -> c17:p11:w [color="black", label=""];
+x1:e:e -> n3:w [color="black", label=""];
+n3:e -> c17:p3:w [color="black", label=""];
+c17:p15:e -> n4:w [color="black", style="setlinewidth(3)", label=""];
+c17:p16:e -> n5:w [color="black", style="setlinewidth(3)", label=""];
+x0:e -> n5:w [color="black", style="setlinewidth(3)", label=""];
+n6:e -> c17:p14:w [color="black", style="setlinewidth(3)", label=""];
+n7:e -> c17:p13:w [color="black", style="setlinewidth(3)", label=""];
+n8:e -> c17:p12:w [color="black", label=""];
+n9:e -> x2:w:w [color="black", label=""];
+}
