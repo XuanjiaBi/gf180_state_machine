@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 596040 596040
+string GDS_END 4916664
+string GDS_FILE /home/xb4syf/ASIC/gf180-demo/openlane/user_project_wrapper/runs/22_12_05_11_20/results/signoff/user_project_wrapper.magic.gds
+string GDS_START 2163962
+<< end >>
